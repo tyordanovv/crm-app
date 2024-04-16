@@ -17,9 +17,10 @@
 		<module>api-core</module>
 		<module>aws-core</module>
 		<module>contact-service</module>
-		<module>message-service</module>
-		<module>notification-service</module>
-		<module>rule-service</module>
+		<module>sms-message-service</module>
+		<module>notification-management-service</module>
+		<module>rule-management-service</module>
+		<module>payment-service</module>
 		<module>user-service</module>
 	</modules>
 
