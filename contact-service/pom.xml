@@ -17,6 +17,7 @@
 	<description>crm-app</description>
 
 	<dependencies>
+<!--	External dependencies-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -31,6 +32,14 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+<!--	Local dependencies-->
+		<dependency>
+			<groupId>eu.elex8x</groupId>
+			<artifactId>api-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
