@@ -1,0 +1,14 @@
+server:
+  port: 8084
+aws:
+  accessKeyId: ACCESS_KEY_ID
+  secretKey: SECRET_KEY
+  dynamodb:
+    endpoint: dynamodb.eu-central-1.amazonaws.com
+spring:
+  application:
+    name: contact-service
+  data:
+    dynamodb:
+      entity2ddl:
+        auto: create-only

@@ -1,15 +1,15 @@
 server:
-  port: 8081
+  port: PORT(8081)
 spring:
   application:
     name: rule-management-service
   datasource:
-    password: password
-    url: jdbc:postgresql://localhost:5432/
-    username: admin
+    password: RULE_MANAGEMENT_DB_PASSWORD
+    url: RULE_MANAGEMENT_DB_URL
+    username: RULE_MANAGEMENT_DB_USERNAME
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create-drop # "create-drop" only for local dev
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
