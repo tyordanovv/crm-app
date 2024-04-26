@@ -25,7 +25,7 @@ public class DynamoDBConfiguration {
     @Value("${aws.dynamodb.endpoint}")
     private String dynamoDBEndpoint;
 
-    private static Regions region = Regions.EU_CENTRAL_1;
+    private static final Regions region = Regions.EU_CENTRAL_1;
 
     @Bean
     public DynamoDBMapper dynamoDBMapper() {
@@ -37,15 +37,15 @@ public class DynamoDBConfiguration {
                 .standard()
                 .withEndpointConfiguration(
                         new AwsClientBuilder.EndpointConfiguration(
-                                "dynamodb.eu-central-1.amazonaws.com",
+                                dynamoDBEndpoint,
                                 region.getName()
                         )
                 )
                 .withCredentials(
                         new AWSStaticCredentialsProvider(
                                 new BasicAWSCredentials(
-                                        "AKIA3NM5FFKYTI6FZCBW",
-                                        "SC5YaXZBVTeI2AwfFLkJ+apYUqxDqS38B3Vfos/C"
+                                        accessKeyId,
+                                        secretKey
                                 )
                         )
                 )
