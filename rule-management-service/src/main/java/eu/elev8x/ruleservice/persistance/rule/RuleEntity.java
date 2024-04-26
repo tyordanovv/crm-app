@@ -2,6 +2,7 @@ package eu.elev8x.ruleservice.persistance.rule;
 
 import eu.elev8x.ruleservice.persistance.condition.ConditionEntity;
 import eu.elex8x.apicore.core.rule.RuleDTO;
+import eu.elex8x.apicore.core.rule.RuleType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -54,13 +55,19 @@ public class RuleEntity {
     )
     private Set<ConditionEntity> conditions;
 
+    @Column(
+            name = "rule_type"
+    )
+    private RuleType type;
+
     public RuleDTO toRuleDTO() {
         return new RuleDTO(
                 this.id,
                 this.name,
                 this.description,
                 this.updatedAt,
-                this.userId
+                this.userId,
+                this.type
         );
     }
 }

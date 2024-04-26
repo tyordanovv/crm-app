@@ -27,6 +27,12 @@ services:
     networks:
       - postgres
     restart: unless-stopped
+  dynamodb-local:
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    working_dir: /home/dynamodblcoal
 
 networks:
   postgres:

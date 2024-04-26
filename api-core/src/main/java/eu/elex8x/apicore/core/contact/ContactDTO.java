@@ -1,4 +1,14 @@
 package eu.elex8x.apicore.core.contact;
 
-public record ContactDTO() {
+import java.util.Map;
+
+public record ContactDTO(
+        String id,
+        String firstName,
+        String lastName,
+        String email,
+        PhoneNumber number
+//        ,
+//        Map<String, Object> attributes
+) {
 }

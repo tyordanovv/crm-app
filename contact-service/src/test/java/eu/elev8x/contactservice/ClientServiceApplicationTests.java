@@ -1,4 +1,4 @@
-package eu.elex8x.contactservice;
+package eu.elev8x.contactservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

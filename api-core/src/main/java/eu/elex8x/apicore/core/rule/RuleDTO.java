@@ -7,5 +7,6 @@ public record RuleDTO (
         String name,
         String description,
         LocalDateTime lastUpdate,
-        String userId
+        String userId,
+        RuleType type
 ){}

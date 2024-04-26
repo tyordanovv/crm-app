@@ -5,5 +5,4 @@ public record ConditionDTO(
         String attribute,
         String operator,
         String value
-) {
-}
+) {}

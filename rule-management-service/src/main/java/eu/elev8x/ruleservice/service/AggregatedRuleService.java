@@ -5,6 +5,7 @@ import eu.elex8x.apicore.composite.AggregatedRuleDTO;
 import eu.elex8x.apicore.composite.AggregatedRuleUpdateRequest;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Set;
 
 public interface AggregatedRuleService {
@@ -30,8 +31,14 @@ public interface AggregatedRuleService {
 
     /**
      *
-     * @param userId
-     * @return
+     * @param userId id of user
+     * @return List of the scheduled user rules
      */
-    Set<AggregatedRuleDTO> getScheduledAggregatedRules(String userId);
+    List<AggregatedRuleDTO> getScheduledAggregatedRules(String userId);
+
+    /**
+     *
+     * @return List of all the scheduled rules
+     */
+    List<AggregatedRuleDTO> getAllScheduledAggregatedRules();
 }

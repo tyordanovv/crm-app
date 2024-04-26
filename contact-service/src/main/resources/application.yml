@@ -1,17 +1,14 @@
 server:
   port: 8084
+aws:
+  accessKeyId: AKIA3NM5FFKYTI6FZCBW
+  secretKey: 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
+  dynamodb:
+    endpoint: dynamodb.eu-central-1.amazonaws.com
 spring:
   application:
     name: contact-service
-#  datasource:
-#    password: password
-#    url: jdbc:postgresql://localhost:5432/
-#    username: admin
-#  jpa:
-#    hibernate:
-#      ddl-auto: create-drop
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.PostgreSQLDialect
-#        format_sql: true
-#    show-sql: true
+  data:
+    dynamodb:
+      entity2ddl:
+        auto: create-only
