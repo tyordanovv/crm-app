@@ -52,7 +52,10 @@ public class ContactController
         return ResponseEntity.ok(contactService.getUserContacts(userId));
     }
 
-    @PostMapping("/upload")
+    @PostMapping(
+            value = "/upload",
+            consumes = "multipart/form-data",
+            produces = "application/json")
     public ResponseEntity<List<ContactDTO>> uploadCSVFile(@RequestParam("file") MultipartFile file) {
         return ResponseEntity.ok(contactService.uploadCSVFile(file));
     }
